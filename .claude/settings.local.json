@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p .claude-plugin .claude agents mcp src sample-export outputs)",
+      "Bash(touch .claude-plugin/plugin.json)",
+      "Bash(touch .claude/audit.jsonl .claude/settings.json)",
+      "Bash(touch agents/ingest.md agents/audit.md agents/fix.md agents/report.md)",
+      "Bash(touch mcp/server.py)"
+    ]
+  }
+}
