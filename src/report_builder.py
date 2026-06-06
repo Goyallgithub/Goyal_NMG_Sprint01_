@@ -1,4 +1,5 @@
 import json
+import csv
 from urllib.parse import urlparse
 
 def build_reports(df, issues, fixes=None, run_meta=None):
@@ -197,5 +198,30 @@ def build_reports(df, issues, fixes=None, run_meta=None):
 
     with open('outputs/report.html', 'w', encoding='utf-8') as f:
         f.write(html_content)
+
+    # Export fixes to CSV
+    titles_fixes = fixes.get('titles', [])
+    if titles_fixes:
+        with open('outputs/fixes_titles.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=['url', 'old_title', 'new_title'])
+            writer.writeheader()
+            for fix in titles_fixes:
+                writer.writerow({
+                    'url': fix.get('url'),
+                    'old_title': fix.get('old'),
+                    'new_title': fix.get('new')
+                })
+
+    redirect_fixes = fixes.get('redirect_map', [])
+    if redirect_fixes:
+        with open('outputs/redirect_map.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=['from_url', 'to_url', 'reason'])
+            writer.writeheader()
+            for red in redirect_fixes:
+                writer.writerow({
+                    'from_url': red.get('from'),
+                    'to_url': red.get('to'),
+                    'reason': red.get('reason')
+                })
 
     return report_data
