@@ -37,12 +37,12 @@ def main():
     push_update("Ingesting data...", 0, 0)
     
     # 1. Ingest
-    df = load_and_clean_data(csv_path)
-    urls_processed = len(df)
+    df_html, df_images = load_and_clean_data(csv_path)
+    urls_processed = len(df_html)
     
     # 2. Detect
     push_update("Detecting issues...", urls_processed, 0)
-    issues = detect_issues(df)
+    issues = detect_issues(df_html, df_images)
     
     total_issues = len(issues)
     high = sum(1 for i in issues if i.get('severity') == 'High')
@@ -52,11 +52,11 @@ def main():
     
     # 3. Fix
     push_update("Fixing AI titles & routing...", urls_processed, total_issues, sevs)
-    fixes = run_fixes(df, issues)
+    fixes = run_fixes(df_html, issues)
     
     # 4. Report
     push_update("Generating JSON and HTML reports...", urls_processed, total_issues, sevs)
-    build_reports(df, issues, fixes)
+    build_reports(df_html, issues, fixes)
     
     push_update("Audit Complete!", urls_processed, total_issues, sevs)
     print("✅ Done! Check outputs/report.json and outputs/report.html")

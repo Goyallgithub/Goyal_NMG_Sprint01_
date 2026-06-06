@@ -8,8 +8,9 @@ def load_and_clean_data(file_path):
     df.columns = df.columns.str.strip()
     
     # Pre-filter: Only rows where Content Type contains "text/html"
+    df_html = df.copy()
     if 'Content Type' in df.columns:
-        df = df[df['Content Type'].str.contains('text/html', na=False, case=False)].copy()
+        df_html = df[df['Content Type'].str.contains('text/html', na=False, case=False)].copy()
         
     # 2. Convert specific columns to numeric, replacing NaNs with 0
     numeric_cols = [
@@ -18,16 +19,17 @@ def load_and_clean_data(file_path):
         'Meta Description 1 Length'
     ]
     for col in numeric_cols:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+        if col in df_html.columns:
+            df_html[col] = pd.to_numeric(df_html[col], errors='coerce').fillna(0)
             
     # Add helper boolean for indexable page definition
     # "indexable page" = Indexability == "Indexable" AND Status Code == 200
-    if 'Indexability' in df.columns and 'Status Code' in df.columns:
+    if 'Indexability' in df_html.columns and 'Status Code' in df_html.columns:
         # Cast Status Code to numeric just in case, before comparing
-        df['Status Code'] = pd.to_numeric(df['Status Code'], errors='coerce')
-        df['is_indexable'] = (df['Indexability'] == 'Indexable') & (df['Status Code'] == 200)
+        df_html['Status Code'] = pd.to_numeric(df_html['Status Code'], errors='coerce')
+        df_html['is_indexable'] = (df_html['Indexability'] == 'Indexable') & (df_html['Status Code'] == 200)
     else:
-        df['is_indexable'] = False
+        df_html['is_indexable'] = False
 
-    return df
+    df_images = df[df['Content Type'].str.contains('image', na=False, case=False)]
+    return df_html, df_images

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["site", "urls_crawled", "summary", "issues", "recommendations", "run_meta"],
+  "properties": {
+    "site": { "type": "string" },
+    "urls_crawled": { "type": "integer" },
+    "summary": { "type": "object" },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "severity", "affected_urls", "count"]
+      }
+    },
+    "fixes": { "type": "object" },
+    "recommendations": { "type": "array" },
+    "run_meta": { "type": "object" }
+  }
+}

@@ -1,6 +1,6 @@
 import pandas as pd
 
-def detect_issues(df):
+def detect_issues(df, df_images=None):
     issues = []
     
     # Helper masks
@@ -77,5 +77,11 @@ def detect_issues(df):
         add_issue('non_indexable_but_linked', 'Medium', df[non_idx_linked]['Address'], "{count} non-indexable pages receive internal links.")
     
     add_issue('slow_page', 'Low', df[df['Response Time'] > 1.0]['Address'], "{count} pages have a response time > 1.0s.")
+
+    if df_images is not None and not df_images.empty:
+        if 'Alt Text' in df_images.columns:
+            missing_alt = df_images[df_images['Alt Text'].isna() | (df_images['Alt Text'].str.strip() == '')]
+            if len(missing_alt):
+                issues.append({"type":"missing_image_alt_text","severity":"Medium","affected_urls":missing_alt['Address'].tolist(),"count":len(missing_alt),"explanation":f"{len(missing_alt)} images are missing alt text attributes."})
 
     return issues

@@ -1,39 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Audit Report - nmgtechnologies.com</title>
     <style>
-        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; color: #333; }
-        h1, h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .summary { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-        .High { color: #d32f2f; font-weight: bold; }
-        .Medium { color: #f57c00; font-weight: bold; }
-        .Low { color: #388e3c; font-weight: bold; }
-        li { margin-bottom: 10px; line-height: 1.5; }
+        :root {
+            --sidebar-bg: #0f172a;
+            --body-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --high-color: #ef4444;
+            --medium-color: #f59e0b;
+            --low-color: #10b981;
+            --border-color: #e2e8f0;
+        }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; margin: 0; display: flex; background: var(--body-bg); color: var(--text-main); }
+
+        /* Sidebar */
+        aside { width: 260px; background: var(--sidebar-bg); height: 100vh; position: fixed; color: white; padding: 24px; box-sizing: border-box; }
+        aside h1 { font-size: 1.25rem; margin-bottom: 32px; line-height: 1.2; }
+        aside nav { display: flex; flex-direction: column; gap: 12px; }
+        aside nav a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        aside nav a:hover { color: white; }
+
+        /* Main Content */
+        main { margin-left: 260px; padding: 40px; width: 100%; box-sizing: border-box; }
+        .header { margin-bottom: 32px; }
+        .header h2 { font-size: 2rem; margin: 0; color: var(--text-main); }
+        .header p { color: var(--text-muted); margin-top: 8px; }
+
+        /* Summary Grid */
+        .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+        .stat-card { background: var(--card-bg); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .stat-card h3 { margin: 0; font-size: 0.875rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; }
+        .stat-card .value { font-size: 2rem; font-weight: 700; margin: 8px 0; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: white; }
+        .badge-high { background: var(--high-color); }
+        .badge-medium { background: var(--medium-color); }
+        .badge-low { background: var(--low-color); }
+
+        /* Issues Section */
+        .section-title { font-size: 1.5rem; margin: 40px 0 20px 0; color: var(--text-main); }
+        .issue-card { background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .issue-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .issue-type { font-weight: 600; font-size: 1.1rem; color: var(--text-main); }
+        .issue-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; }
+
+        details { font-size: 0.875rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px; }
+        details summary { cursor: pointer; font-weight: 500; outline: none; }
+        .url-list { list-style: none; padding: 0; margin: 12px 0 0 0; }
+        .url-list li { padding: 4px 0; overflow-wrap: break-word; font-family: monospace; color: #475569; }
+
+        /* Fixes Section */
+        .fix-card { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 16px; border-radius: 12px; margin-bottom: 12px; }
+        .fix-pair { display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 4px; }
+        .fix-old { color: #991b1b; text-decoration: line-through; }
+        .fix-new { color: #166534; font-weight: 600; }
     </style>
 </head>
 <body>
-    <h1>SEO Audit Report: nmgtechnologies.com</h1>
-    <div class="summary">
-        <p><strong>URLs Crawled:</strong> 111</p>
-        <p><strong>Total Issues:</strong> 10 
-           (<span class="High">High: 1</span> | 
-            <span class="Medium">Medium: 4</span> | 
-            <span class="Low">Low: 5</span>)
-        </p>
-    </div>
-    <h2>Issues Detected</h2>
-    <ul>
-        <li><span class="High">[High]</span> <strong>duplicate_title</strong>: 12 indexable URLs share duplicate titles.</li>
-        <li><span class="Medium">[Medium]</span> <strong>title_too_long</strong>: 64 pages have titles exceeding length or pixel limits.</li>
-        <li><span class="Low">[Low]</span> <strong>title_too_short</strong>: 22 pages have titles under 30 characters.</li>
-        <li><span class="Medium">[Medium]</span> <strong>duplicate_meta_description</strong>: 16 indexable URLs share duplicate meta descriptions.</li>
-        <li><span class="Low">[Low]</span> <strong>meta_description_too_long</strong>: 43 pages have meta descriptions > 155 characters.</li>
-        <li><span class="Medium">[Medium]</span> <strong>missing_h1</strong>: 2 200 OK pages are missing an H1 tag.</li>
-        <li><span class="Low">[Low]</span> <strong>duplicate_h1</strong>: 19 indexable URLs share duplicate H1 tags.</li>
-        <li><span class="Low">[Low]</span> <strong>thin_content</strong>: 10 indexable pages have < 200 words.</li>
-        <li><span class="Medium">[Medium]</span> <strong>non_indexable_but_linked</strong>: 2 non-indexable pages receive internal links.</li>
-        <li><span class="Low">[Low]</span> <strong>slow_page</strong>: 11 pages have a response time > 1.0s.</li>
-    </ul>
+    <aside>
+        <h1>SEO Command Center</h1>
+        <nav>
+            <a href="#summary">Summary</a>
+            <a href="#issues">Issue Analysis</a>
+            <a href="#fixes">Fixes Applied</a>
+        </nav>
+    </aside>
+    <main>
+        <div class="header">
+            <h2>Audit Report: nmgtechnologies.com</h2>
+            <p>Analysis of 111 crawled URLs</p>
+        </div>
+
+        <div id="summary" class="summary-grid">
+            <div class="stat-card">
+                <h3>High Severity</h3>
+                <div class="value" style="color: var(--high-color)">1</div>
+                <span class="badge badge-high">Critical</span>
+            </div>
+            <div class="stat-card">
+                <h3>Medium Severity</h3>
+                <div class="value" style="color: var(--medium-color)">4</div>
+                <span class="badge badge-medium">Warning</span>
+            </div>
+            <div class="stat-card">
+                <h3>Low Severity</h3>
+                <div class="value" style="color: var(--low-color)">5</div>
+                <span class="badge badge-low">Optimization</span>
+            </div>
+        </div>
+
+        <h3 id="issues" class="section-title">Issues Detected</h3>
+
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-high">High</span>
+                <span class="issue-type">Duplicate Title</span>
+            </div>
+            <div class="issue-desc">12 indexable URLs share duplicate titles.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/</li><li>https://nmgtechnologies.com/industry/fintech</li><li>https://nmgtechnologies.com/industry/travel</li><li>https://nmgtechnologies.com/industry/marketresearch</li><li>https://nmgtechnologies.com/industry/healthcare</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-medium">Medium</span>
+                <span class="issue-type">Title Too Long</span>
+            </div>
+            <div class="issue-desc">64 pages have titles exceeding length or pixel limits.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/</li><li>https://nmgtechnologies.com/solution/portals/</li><li>https://nmgtechnologies.com/company/about-us</li><li>https://nmgtechnologies.com/resources/library/</li><li>https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-medium">Medium</span>
+                <span class="issue-type">Duplicate Meta Description</span>
+            </div>
+            <div class="issue-desc">16 indexable URLs share duplicate meta descriptions.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/services/web-development</li><li>https://nmgtechnologies.com/industry/travel</li><li>https://nmgtechnologies.com/services/ecommerce-development/magento-development/</li><li>https://nmgtechnologies.com/industry/marketresearch</li><li>https://nmgtechnologies.com/services/erp-development</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-medium">Medium</span>
+                <span class="issue-type">Missing H1</span>
+            </div>
+            <div class="issue-desc">2 200 OK pages are missing an H1 tag.</div>
+            <details>
+                <summary>View top 2 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/contact-us</li><li>https://nmgtechnologies.com/company/process/</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-medium">Medium</span>
+                <span class="issue-type">Non Indexable But Linked</span>
+            </div>
+            <div class="issue-desc">2 non-indexable pages receive internal links.</div>
+            <details>
+                <summary>View top 2 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/solution/internet-of-things/</li><li>https://nmgtechnologies.com/industry/edtech</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-low">Low</span>
+                <span class="issue-type">Title Too Short</span>
+            </div>
+            <div class="issue-desc">22 pages have titles under 30 characters.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/wordpress-development</li><li>https://nmgtechnologies.com/services/web-development</li><li>https://nmgtechnologies.com/blog/tag/events</li><li>https://nmgtechnologies.com/services/dedicated-team-setups/</li><li>https://nmgtechnologies.com/services/shopify</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-low">Low</span>
+                <span class="issue-type">Meta Description Too Long</span>
+            </div>
+            <div class="issue-desc">43 pages have meta descriptions > 155 characters.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/</li><li>https://nmgtechnologies.com/company/about-us</li><li>https://nmgtechnologies.com/solution/fintech/</li><li>https://nmgtechnologies.com/ai-driven-enterprise-software-development</li><li>https://nmgtechnologies.com/solution/artificial-intelligence/</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-low">Low</span>
+                <span class="issue-type">Duplicate H1</span>
+            </div>
+            <div class="issue-desc">19 indexable URLs share duplicate H1 tags.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/blog/tag/events</li><li>https://nmgtechnologies.com/blog</li><li>https://nmgtechnologies.com/success-stories</li><li>https://nmgtechnologies.com/work/web/</li><li>https://nmgtechnologies.com/work/mobile/</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-low">Low</span>
+                <span class="issue-type">Thin Content</span>
+            </div>
+            <div class="issue-desc">10 indexable pages have < 200 words.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/company/about-us</li><li>https://nmgtechnologies.com/get-custom-pricing</li><li>https://nmgtechnologies.com/sitemap</li><li>https://nmgtechnologies.com/contact-us</li><li>https://nmgtechnologies.com/success-stories</li></ul>
+            </details>
+        </div>
+        
+        <div class="issue-card">
+            <div class="issue-header">
+                <span class="badge badge-low">Low</span>
+                <span class="issue-type">Slow Page</span>
+            </div>
+            <div class="issue-desc">11 pages have a response time > 1.0s.</div>
+            <details>
+                <summary>View top 5 affected URLs</summary>
+                <ul class="url-list"><li>https://nmgtechnologies.com/download-outsourcingrules-ebook</li><li>https://nmgtechnologies.com/resources/library/python-development-guide</li><li>https://nmgtechnologies.com/download-appdevelopmentcost-ebook</li><li>https://nmgtechnologies.com/mobile-development-checklist</li><li>https://nmgtechnologies.com/resources/library/mobile-app-development-guide</li></ul>
+            </details>
+        </div>
+        <h3 id="fixes" class="section-title">Fixes Applied</h3><div class="fix-group"><h4>AI-Optimized Titles</h4>
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/ai-powered-business-process-transformation</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">AI Powered Service | Innovative AI-Driven Solutions for Business</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/ui-ux-mobile-app-development</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Importance of UI & UX in mobile app development in 2022 | NMG</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/sitemap</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Sitemap - NMG Technologies</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/services/custom-software-development/php-development/</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">PHP Development Services - Hire PHP Web Developers | NMG Technologies</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/tag/outsourcing</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Blog | Outsourcing</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/tag/featured</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Blog | Featured</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/services/crm-development</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">CRM Development Services</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/download-developmental-checklist</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Download Web Development Checklist [Updated 2019] | NMG Technologies</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/download-appdevelopmentcost-ebook</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Download App Development Cost Ebook for 2019 with Example | NMG Technologies</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">AI App Development Services | Custom Artificial Intelligence Applications</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">NMG Technologies to Participate in Mobile Word Capital Barcelona – the world’s largest and most influential connectivity event</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/tag/growth</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Blog | Growth</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/nmg-to-participate-in-the-largest-tech-expo-in-the-middle-east-gitex-global-2023-dubai</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">NMG to Participate in the Largest Tech Expo in the Middle East - GITEX Global 2023, Dubai</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/industry/staffing</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">IT Outsource Software, Web & Mobile App Development Company - NMG</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/blog/tag/design</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Blog | Design</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/success-stories/wealth-concert</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">IT Outsource Software, Web & Mobile App Development Company - NMG</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/services/user-interface-design/</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">User Interface (UI) Design Services - Hire Experienced UI/UX Designers</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/services/erp-development</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">ERP Development</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/services/mobile-application-development/android-app-development</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Android App Development Company - Hire Android Developers | NMG Technologies</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            
+            <div class="fix-card">
+                <div style="font-weight:600; font-size:0.8rem; margin-bottom:8px; color:#475569;">https://nmgtechnologies.com/solution/augmented-reality/</div>
+                <div class="fix-pair"><span>Old:</span> <span class="fix-old">Augmented Reality Apps Development Services - IT Staff Augmentation Developers</span></div>
+                <div class="fix-pair"><span>New:</span> <span class="fix-new">Premium Quality Services | Fast & Reliable</span></div>
+            </div>
+            </div>
+    </main>
 </body>
 </html>
