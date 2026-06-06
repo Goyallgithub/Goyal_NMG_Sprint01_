@@ -1,0 +1,14 @@
+{
+  "name": "seo-command-center",
+  "version": "1.0.0",
+  "description": "Autonomous SEO audit plugin",
+  "skills": [{ "name": "seo-audit", "path": "SKILL.md" }],
+  "commands": [{ "name": "seo-audit", "description": "Run full SEO audit", "skill": "seo-audit" }],
+  "agents": [
+    { "name": "ingest", "path": "agents/ingest.md" },
+    { "name": "audit", "path": "agents/audit.md" },
+    { "name": "fix", "path": "agents/fix.md" },
+    { "name": "report", "path": "agents/report.md" }
+  ],
+  "mcp": { "server": "mcp/server.py", "port": 7700 }
+}
