@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEO Audit Report - nmgtechnologies.com</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; color: #333; }
+        h1, h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .summary { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .High { color: #d32f2f; font-weight: bold; }
+        .Medium { color: #f57c00; font-weight: bold; }
+        .Low { color: #388e3c; font-weight: bold; }
+        li { margin-bottom: 10px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <h1>SEO Audit Report: nmgtechnologies.com</h1>
+    <div class="summary">
+        <p><strong>URLs Crawled:</strong> 111</p>
+        <p><strong>Total Issues:</strong> 10 
+           (<span class="High">High: 1</span> | 
+            <span class="Medium">Medium: 4</span> | 
+            <span class="Low">Low: 5</span>)
+        </p>
+    </div>
+    <h2>Issues Detected</h2>
+    <ul>
+        <li><span class="High">[High]</span> <strong>duplicate_title</strong>: 12 indexable URLs share duplicate titles.</li>
+        <li><span class="Medium">[Medium]</span> <strong>title_too_long</strong>: 64 pages have titles exceeding length or pixel limits.</li>
+        <li><span class="Low">[Low]</span> <strong>title_too_short</strong>: 22 pages have titles under 30 characters.</li>
+        <li><span class="Medium">[Medium]</span> <strong>duplicate_meta_description</strong>: 16 indexable URLs share duplicate meta descriptions.</li>
+        <li><span class="Low">[Low]</span> <strong>meta_description_too_long</strong>: 43 pages have meta descriptions > 155 characters.</li>
+        <li><span class="Medium">[Medium]</span> <strong>missing_h1</strong>: 2 200 OK pages are missing an H1 tag.</li>
+        <li><span class="Low">[Low]</span> <strong>duplicate_h1</strong>: 19 indexable URLs share duplicate H1 tags.</li>
+        <li><span class="Low">[Low]</span> <strong>thin_content</strong>: 10 indexable pages have < 200 words.</li>
+        <li><span class="Medium">[Medium]</span> <strong>non_indexable_but_linked</strong>: 2 non-indexable pages receive internal links.</li>
+        <li><span class="Low">[Low]</span> <strong>slow_page</strong>: 11 pages have a response time > 1.0s.</li>
+    </ul>
+</body>
+</html>

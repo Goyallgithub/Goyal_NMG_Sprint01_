@@ -5,7 +5,10 @@
       "Bash(touch .claude-plugin/plugin.json)",
       "Bash(touch .claude/audit.jsonl .claude/settings.json)",
       "Bash(touch agents/ingest.md agents/audit.md agents/fix.md agents/report.md)",
-      "Bash(touch mcp/server.py)"
+      "Bash(touch mcp/server.py)",
+      "Bash(pip install *)",
+      "Bash(python *)",
+      "Bash(python3 *)"
     ]
   }
 }

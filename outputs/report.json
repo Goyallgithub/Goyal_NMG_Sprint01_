@@ -1,0 +1,408 @@
+{
+  "site": "nmgtechnologies.com",
+  "urls_crawled": 111,
+  "summary": {
+    "total_issues": 10,
+    "by_severity": {
+      "High": 1,
+      "Medium": 4,
+      "Low": 5
+    }
+  },
+  "issues": [
+    {
+      "type": "duplicate_title",
+      "severity": "High",
+      "affected_urls": [
+        "https://nmgtechnologies.com/",
+        "https://nmgtechnologies.com/industry/fintech",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 12,
+      "explanation": "12 indexable URLs share duplicate titles."
+    },
+    {
+      "type": "title_too_long",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/",
+        "https://nmgtechnologies.com/solution/portals/",
+        "https://nmgtechnologies.com/company/about-us",
+        "https://nmgtechnologies.com/resources/library/",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event",
+        "https://nmgtechnologies.com/solution/fintech/",
+        "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
+        "https://nmgtechnologies.com/solution/artificial-intelligence/",
+        "https://nmgtechnologies.com/solution/cloud-apps/",
+        "https://nmgtechnologies.com/industry/fintech",
+        "https://nmgtechnologies.com/services/mobile-application-development/android-app-development",
+        "https://nmgtechnologies.com/get-custom-pricing",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/services/mobile-application-development/ios-app-development/",
+        "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
+        "https://nmgtechnologies.com/services/custom-software-development/php-development/",
+        "https://nmgtechnologies.com/company/careers/",
+        "https://nmgtechnologies.com/company/process/",
+        "https://nmgtechnologies.com/blog/nmg-to-participate-in-the-largest-tech-expo-in-the-middle-east-gitex-global-2023-dubai",
+        "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
+        "https://nmgtechnologies.com/services/it-consulting/",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/agentic-ai",
+        "https://nmgtechnologies.com/blog/nmg-technologies-participated-in-softwave-2023-the-republic-of-korea-software-exhibition",
+        "https://nmgtechnologies.com/services/ecommerce-development/",
+        "https://nmgtechnologies.com/services/custom-software-development/saas-development/",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/solution/blockchain",
+        "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions",
+        "https://nmgtechnologies.com/services/custom-software-development/",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/ai-powered-business-process-transformation",
+        "https://nmgtechnologies.com/services/mobile-application-development",
+        "https://nmgtechnologies.com/services/user-interface-design/",
+        "https://nmgtechnologies.com/company/promise/",
+        "https://nmgtechnologies.com/industry/edtech",
+        "https://nmgtechnologies.com/services/mobile-application-development/tablet-app-development/",
+        "https://nmgtechnologies.com/services/user-interface-design/mobile-design/",
+        "https://nmgtechnologies.com/company/outsourcing/",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/solution/augmented-reality/",
+        "https://nmgtechnologies.com/services/custom-software-development/aspnet-development/",
+        "https://nmgtechnologies.com/download-content-editorial-calendar",
+        "https://nmgtechnologies.com/download-developmental-checklist",
+        "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
+        "https://nmgtechnologies.com/blog/wordpress-website-perfect-solution-small-business",
+        "https://nmgtechnologies.com/blog/top-wordpress-themes",
+        "https://nmgtechnologies.com/resources/library/hire-web-developers-guide",
+        "https://nmgtechnologies.com/work/ecommerce/",
+        "https://nmgtechnologies.com/blog/nmg-to-participate-in-the-largest-tech-expo-in-the-middle-east-gitex-global-2022-dubai",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-retail-innovation-conference-and-expo-2023-in-chicago",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-sponsor-and-exhibit-at-brighton-seo-2023-and-online-pr-show-2023",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
+        "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
+        "https://nmgtechnologies.com/blog/advantages-of-asp-net-core",
+        "https://nmgtechnologies.com/blog/nmg-technologies-made-list-top-mobile-app-development-companies-goodfirms",
+        "https://nmgtechnologies.com/blog/best-practices-offshore-software-development",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/blog/ui-ux-mobile-app-development",
+        "https://nmgtechnologies.com/blog/how-to-build-an-app-like-uber",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 64,
+      "explanation": "64 pages have titles exceeding length or pixel limits."
+    },
+    {
+      "type": "title_too_short",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/wordpress-development",
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/blog/tag/events",
+        "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "https://nmgtechnologies.com/services/shopify",
+        "https://nmgtechnologies.com/sitemap",
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/services/erp-development",
+        "https://nmgtechnologies.com/solution/internet-of-things/",
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/services/crm-development",
+        "https://nmgtechnologies.com/disclaimer",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/blog/tag/featured",
+        "https://nmgtechnologies.com/blog/tag/technology",
+        "https://nmgtechnologies.com/blog/tag/web",
+        "https://nmgtechnologies.com/blog/tag/design",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/growth",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/events/page/2"
+      ],
+      "count": 22,
+      "explanation": "22 pages have titles under 30 characters."
+    },
+    {
+      "type": "duplicate_meta_description",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/services/ecommerce-development/magento-development/",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/services/erp-development",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/services/crm-development",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 16,
+      "explanation": "16 indexable URLs share duplicate meta descriptions."
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/",
+        "https://nmgtechnologies.com/company/about-us",
+        "https://nmgtechnologies.com/solution/fintech/",
+        "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
+        "https://nmgtechnologies.com/solution/artificial-intelligence/",
+        "https://nmgtechnologies.com/ai-machine-learning-solutions",
+        "https://nmgtechnologies.com/solution/cloud-apps/",
+        "https://nmgtechnologies.com/get-custom-pricing",
+        "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
+        "https://nmgtechnologies.com/services/custom-software-development/php-development/",
+        "https://nmgtechnologies.com/privacy-policy",
+        "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/agentic-ai",
+        "https://nmgtechnologies.com/services/custom-software-development/saas-development/",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/solution/blockchain",
+        "https://nmgtechnologies.com/ai-powered-saas-development",
+        "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions",
+        "https://nmgtechnologies.com/ai-driven-business-transformation-consulting",
+        "https://nmgtechnologies.com/services/custom-software-development/",
+        "https://nmgtechnologies.com/ai-driven-devops-cloud-automation",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/ai-powered-business-process-transformation",
+        "https://nmgtechnologies.com/services/mobile-application-development",
+        "https://nmgtechnologies.com/services/user-interface-design/",
+        "https://nmgtechnologies.com/company/promise/",
+        "https://nmgtechnologies.com/industry/edtech",
+        "https://nmgtechnologies.com/company/outsourcing/",
+        "https://nmgtechnologies.com/solution/augmented-reality/",
+        "https://nmgtechnologies.com/download-content-editorial-calendar",
+        "https://nmgtechnologies.com/resources/library/python-development-guide",
+        "https://nmgtechnologies.com/mobile-development-checklist",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
+        "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
+        "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/blog/ui-ux-mobile-app-development",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 43,
+      "explanation": "43 pages have meta descriptions > 155 characters."
+    },
+    {
+      "type": "missing_h1",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/company/process/"
+      ],
+      "count": 2,
+      "explanation": "2 200 OK pages are missing an H1 tag."
+    },
+    {
+      "type": "duplicate_h1",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/blog/tag/events",
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/work/web/",
+        "https://nmgtechnologies.com/work/mobile/",
+        "https://nmgtechnologies.com/work/advanced-seo/",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/work/ecommerce/",
+        "https://nmgtechnologies.com/blog/tag/featured",
+        "https://nmgtechnologies.com/blog/tag/technology",
+        "https://nmgtechnologies.com/blog/tag/web",
+        "https://nmgtechnologies.com/blog/tag/design",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/growth",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/search-engine-optimization",
+        "https://nmgtechnologies.com/blog/tag/events/page/2"
+      ],
+      "count": 19,
+      "explanation": "19 indexable URLs share duplicate H1 tags."
+    },
+    {
+      "type": "thin_content",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/company/about-us",
+        "https://nmgtechnologies.com/get-custom-pricing",
+        "https://nmgtechnologies.com/sitemap",
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/search-engine-optimization",
+        "https://nmgtechnologies.com/blog/tag/events/page/2"
+      ],
+      "count": 10,
+      "explanation": "10 indexable pages have < 200 words."
+    },
+    {
+      "type": "non_indexable_but_linked",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/solution/internet-of-things/",
+        "https://nmgtechnologies.com/industry/edtech"
+      ],
+      "count": 2,
+      "explanation": "2 non-indexable pages receive internal links."
+    },
+    {
+      "type": "slow_page",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/download-outsourcingrules-ebook",
+        "https://nmgtechnologies.com/resources/library/python-development-guide",
+        "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
+        "https://nmgtechnologies.com/mobile-development-checklist",
+        "https://nmgtechnologies.com/resources/library/mobile-app-development-guide",
+        "https://nmgtechnologies.com/blog/nmg-technologies-made-list-top-mobile-app-development-companies-goodfirms",
+        "https://nmgtechnologies.com/blog/best-practices-offshore-software-development",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/success-stories/atlys-case-study",
+        "https://nmgtechnologies.com/success-stories/wealth-concert",
+        "https://nmgtechnologies.com/blog/tag/events/page/2"
+      ],
+      "count": 11,
+      "explanation": "11 pages have a response time > 1.0s."
+    }
+  ],
+  "fixes": {
+    "titles": [
+      {
+        "url": "https://nmgtechnologies.com/success-stories/international-insurance",
+        "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
+        "new": "International Insurance Success Story | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event",
+        "old": "NMG Technologies to Participate in Mobile Word Capital Barcelona \u2013 the world\u2019s largest and most influential connectivity event",
+        "new": "NMG Technologies at Mobile World Congress Barcelona"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/user-interface-design/mobile-design/",
+        "old": "Mobile App Design Services - Hire Mobile App Designers Company",
+        "new": "Mobile App UI/UX Design Services | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/erp-development",
+        "old": "ERP Development",
+        "new": "Custom ERP Development Services | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
+        "old": "How to Manage Work from home during the coronavirus lockdown | NMG",
+        "new": "Working From Home During Lockdown: Tips and Best Practices"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-sponsor-and-exhibit-at-brighton-seo-2023-and-online-pr-show-2023",
+        "old": "NMG Technologies to Sponsor and Exhibit at Brighton SEO 2023 and Online PR Show 2023",
+        "new": "NMG Technologies at Brighton SEO & Online PR Show 2023"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/featured",
+        "old": "Blog | Featured",
+        "new": "Featured Articles & Insights | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/technology",
+        "old": "Blog | Technology",
+        "new": "Latest Technology Trends & Insights | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/download-developmental-checklist",
+        "old": "Download Web Development Checklist [Updated 2019] | NMG Technologies",
+        "new": "Free Developmental Checklist Download | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/resources/library/",
+        "old": "Most Resourceful Content for Businesses to Get Started | NMG Technologies",
+        "new": "Resource Library | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
+        "old": "Enterprise AI Solutions | AI Software and Development Company",
+        "new": "AI-Driven Enterprise Software Development | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/solution/fintech/",
+        "old": "Fintech Apps & Software Development Services - Hire Fintech Developers",
+        "new": "Fintech Solutions & Software Development | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/custom-software-development/",
+        "old": "Best Custom Software Development Service Company - 2019 | NMG Technologies.",
+        "new": "Custom Software Development Services | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/agentic-ai",
+        "old": "Agentic AI Consulting Services | Expert AI Development & Integration",
+        "new": "Agentic AI Solutions: The Future of Autonomous AI Agents"
+      },
+      {
+        "url": "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
+        "old": "Download App Development Cost Ebook for 2019 with Example | NMG Technologies",
+        "new": "App Development Cost Guide: Free eBook | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/ecommerce-development/",
+        "old": "Ecommerce Web Development Company  | Hire World's Best E-commerce Developer",
+        "new": "Ecommerce Development Services | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/sitemap",
+        "old": "Sitemap - NMG Technologies",
+        "new": "Sitemap | NMG Technologies"
+      },
+      {
+        "url": "https://nmgtechnologies.com/wordpress-development",
+        "old": "WordPress Development",
+        "new": "WordPress Development Services | Custom WP Solutions | NMG"
+      },
+      {
+        "url": "https://nmgtechnologies.com/solution/internet-of-things/",
+        "old": "Internet Of Things",
+        "new": "IoT Solutions for Industrial Digital Transformation | NMG"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/best-practices-offshore-software-development",
+        "old": "Best Practices of Offshore Software Development Company (2022)",
+        "new": "Best Practices for Offshore Software Development | NMG"
+      }
+    ],
+    "redirect_map": []
+  },
+  "recommendations": [
+    "Fix the 1 High-severity issues first."
+  ],
+  "run_meta": {
+    "model": "gemma4:31b-cloud",
+    "model_calls": 0,
+    "duration_sec": 0
+  }
+}
